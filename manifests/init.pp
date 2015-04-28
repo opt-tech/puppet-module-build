@@ -22,7 +22,7 @@ define build::install (
   
   $test   = "/usr/bin/test"
   $unzip  = "/usr/bin/unzip"
-  $tar    = "/usr/sbin/tar"
+  $tar    = "/bin/tar"
   $bunzip = "/usr/bin/bunzip2"
   $gunzip = "/usr/bin/gunzip"
   
