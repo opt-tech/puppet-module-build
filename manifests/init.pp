@@ -16,7 +16,7 @@ define build::install (
   $make_cmd="",
   $rm_build_folder=true) {
   
-  build::requires { "$name-requires-build-essential":  package => 'build-essential' }
+  #build::requires { "$name-requires-build-essential":  package => 'build-essential' }
   
   $cwd    = "/usr/local/src"
   
