@@ -18,10 +18,6 @@ define build::install (
   
   build::requires { "$name-requires-build-essential":  package => 'build-essential' }
   
-  Exec {
-    unless => "$test -f $creates",
-  }
-  
   $cwd    = "/usr/local/src"
   
   $test   = "/usr/bin/test"
@@ -29,6 +25,10 @@ define build::install (
   $tar    = "/usr/sbin/tar"
   $bunzip = "/usr/bin/bunzip2"
   $gunzip = "/usr/bin/gunzip"
+  
+  Exec {
+    unless => "$test -f $creates",
+  }  
   
   $filename = basename($download)
   
