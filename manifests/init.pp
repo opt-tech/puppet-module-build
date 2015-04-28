@@ -40,7 +40,7 @@ define build::install (
   }
   
   $foldername = $pkg_folder ? {
-    ''      => gsub($filename, $extension, ""),
+    ''      => regsubst($filename, $extension, ""),
     default => $pkg_folder,
   }
   
